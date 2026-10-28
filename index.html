@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley v. California (2014) — Landmark Supreme Court Case</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#f97316',
+                            'orange-hover': '#ea580c',
+                            black: '#000000',
+                            card: '#121212',
+                            border: '#27272a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f97316;
+            border-radius: 3px;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: #ffffff !important; color: #000000 !important; }
+            .page-section { display: block !important; margin-bottom: 2rem; color: #000000 !important; }
+            .print-card { background: #ffffff !important; color: #000000 !important; border: 1px solid #ccc !important; box-shadow: none !important; }
+            .print-text { color: #000000 !important; }
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-zinc-100 font-sans min-h-screen flex flex-col selection:bg-brand-orange selection:text-black">
+
+    <!-- HEADER (TYPOGRAPHIC & CLEAN) -->
+    <header class="bg-black border-b border-brand-border sticky top-0 z-50 no-print">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-16">
+                <!-- Branding -->
+                <div>
+                    <span class="text-[10px] uppercase font-mono tracking-widest text-brand-orange block leading-tight">U.S. Supreme Court Landmark Ruling</span>
+                    <h1 class="text-base sm:text-lg font-black tracking-tight text-white uppercase">Riley v. California <span class="text-xs font-normal text-zinc-400 font-mono">(2014)</span></h1>
+                </div>
+
+                <!-- Actions -->
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <button onclick="window.print()" class="px-3 py-1.5 rounded bg-zinc-900 hover:bg-zinc-800 text-zinc-200 text-xs font-mono font-bold border border-zinc-700 hover:border-brand-orange transition">
+                        Print Brief
+                    </button>
+                    <button onclick="copyAllText()" class="px-3 py-1.5 rounded bg-brand-orange hover:bg-brand-orange-hover text-black text-xs font-mono font-black transition">
+                        Copy Full Brief
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="bg-zinc-950 border-t border-brand-border overflow-x-auto">
+            <div class="max-w-5xl mx-auto px-4 flex space-x-1 text-xs font-mono py-2">
+                <button onclick="switchTab('overview')" id="tab-overview" class="nav-tab px-4 py-2 rounded transition whitespace-nowrap bg-brand-orange text-black font-black">
+                    1. OVERVIEW
+                </button>
+                <button onclick="switchTab('summary')" id="tab-summary" class="nav-tab px-4 py-2 rounded transition whitespace-nowrap text-zinc-400 hover:bg-zinc-900 hover:text-white">
+                    2. CASE BACKGROUND
+                </button>
+                <button onclick="switchTab('decision')" id="tab-decision" class="nav-tab px-4 py-2 rounded transition whitespace-nowrap text-zinc-400 hover:bg-zinc-900 hover:text-white">
+                    3. COURT DECISION
+                </button>
+                <button onclick="switchTab('impact')" id="tab-impact" class="nav-tab px-4 py-2 rounded transition whitespace-nowrap text-zinc-400 hover:bg-zinc-900 hover:text-white">
+                    4. LEGAL IMPACT
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 flex-1 w-full space-y-8">
+
+        <!-- ==================== PAGE 1: OVERVIEW ==================== -->
+        <section id="page-overview" class="page-section space-y-8">
+
+            <!-- Hero Banner -->
+            <div class="bg-brand-card p-6 sm:p-10 rounded-xl border-l-4 border-brand-orange border-y border-r border-brand-border space-y-4 print-card">
+                <div class="text-xs font-mono text-brand-orange uppercase tracking-widest">Fourth Amendment & Digital Privacy</div>
+                <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+                    Riley v. California
+                </h2>
+                <blockquote class="text-sm sm:text-lg text-zinc-200 font-serif italic border-l-2 border-zinc-700 pl-4 py-1 leading-relaxed">
+                    "The answer to what police must do before searching a cell phone seized incident to an arrest is simple—<span class="text-brand-orange font-bold not-italic">get a warrant</span>."
+                </blockquote>
+                <div class="text-xs font-mono text-zinc-400 uppercase tracking-wider">— Chief Justice John G. Roberts, Jr. (Majority Opinion, 573 U.S. 373)</div>
+            </div>
+
+            <!-- Fast Facts Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">
+                <div class="bg-brand-card p-4 rounded border border-brand-border print-card">
+                    <div class="text-zinc-500 uppercase">Docket No.</div>
+                    <div class="font-bold text-white text-sm mt-1">13-132</div>
+                </div>
+                <div class="bg-brand-card p-4 rounded border border-brand-border print-card">
+                    <div class="text-zinc-500 uppercase">Decided</div>
+                    <div class="font-bold text-white text-sm mt-1">June 25, 2014</div>
+                </div>
+                <div class="bg-brand-card p-4 rounded border border-brand-border print-card">
+                    <div class="text-zinc-500 uppercase">Vote Ratio</div>
+                    <div class="font-bold text-brand-orange text-sm mt-1">9–0 Unanimous</div>
+                </div>
+                <div class="bg-brand-card p-4 rounded border border-brand-border print-card">
+                    <div class="text-zinc-500 uppercase">Key Legal Rule</div>
+                    <div class="font-bold text-white text-sm mt-1">4th Amendment</div>
+                </div>
+            </div>
+
+            <!-- Core Summary & Question -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Executive Summary -->
+                <div class="bg-brand-card p-6 rounded-xl border border-brand-border space-y-3 print-card">
+                    <div class="flex items-center justify-between border-b border-brand-border pb-3">
+                        <h3 class="text-base font-bold text-white font-mono uppercase">Executive Summary</h3>
+                        <button onclick="copyText('summaryText')" class="text-[11px] font-mono px-2 py-1 bg-zinc-900 text-zinc-300 hover:text-brand-orange rounded border border-zinc-700">
+                            Copy Text
+                        </button>
+                    </div>
+                    <p id="summaryText" class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-serif print-text">
+                        <em>Riley v. California (2014)</em> is a landmark Supreme Court case addressing search and seizure in the digital age. The Court ruled unanimously that police officers must obtain a search warrant before inspecting digital information stored on a smartphone confiscated during an arrest, establishing that modern digital devices receive full Fourth Amendment protection.
+                    </p>
+                </div>
+
+                <!-- Constitutional Question -->
+                <div class="bg-brand-card p-6 rounded-xl border border-brand-border space-y-3 print-card">
+                    <div class="flex items-center justify-between border-b border-brand-border pb-3">
+                        <h3 class="text-base font-bold text-white font-mono uppercase">Constitutional Question</h3>
+                        <button onclick="copyText('questionText')" class="text-[11px] font-mono px-2 py-1 bg-zinc-900 text-zinc-300 hover:text-brand-orange rounded border border-zinc-700">
+                            Copy Text
+                        </button>
+                    </div>
+                    <p id="questionText" class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-serif print-text">
+                        May the police, consistent with the Fourth Amendment, conduct a warrantless search of digital information on a cell phone seized from an individual who has been lawfully arrested?
+                    </p>
+                    <div class="p-3 bg-black rounded border-l-2 border-brand-orange text-xs text-zinc-200 font-mono">
+                        <strong class="text-brand-orange block uppercase mb-0.5">COURT ANSWER: NO</strong>
+                        Cell phones are modern repositories containing vast, private personal records that differ fundamentally from physical objects like wallets or pockets.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Imagery Panel -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-brand-card rounded-xl border border-brand-border overflow-hidden print-card">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1000&q=80" alt="Supreme Court Building" class="w-full h-48 object-cover grayscale contrast-125">
+                    <div class="p-4 text-xs text-zinc-400 font-mono">
+                        <span class="text-brand-orange font-bold uppercase">Supreme Court of the United States:</span> Reaffirmed Fourth Amendment protections for modern digital technology.
+                    </div>
+                </div>
+                <div class="bg-brand-card rounded-xl border border-brand-border overflow-hidden print-card">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1000&q=80" alt="Smartphone Digital Privacy" class="w-full h-48 object-cover grayscale contrast-125">
+                    <div class="p-4 text-xs text-zinc-400 font-mono">
+                        <span class="text-brand-orange font-bold uppercase">Digital Privacy:</span> Modern smartphones hold thousands of documents, location history, and private communications.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ==================== PAGE 2: CASE BACKGROUND ==================== -->
+        <section id="page-summary" class="page-section hidden space-y-8">
+
+            <div class="bg-brand-card p-6 sm:p-8 rounded-xl border border-brand-border print-card">
+                <div class="flex items-center justify-between border-b border-brand-border pb-4 mb-6">
+                    <div>
+                        <span class="text-xs font-mono text-brand-orange uppercase">Factual Narrative</span>
+                        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1 uppercase">Case Background & Procedural History</h2>
+                    </div>
+                    <button onclick="copyText('backgroundNarrative')" class="text-xs font-mono px-3 py-1.5 bg-zinc-900 text-zinc-300 hover:text-brand-orange rounded border border-zinc-700">
+                        Copy Section
+                    </button>
+                </div>
+
+                <div id="backgroundNarrative" class="space-y-6 text-xs sm:text-sm text-zinc-300 leading-relaxed font-serif">
+                    <!-- David Riley Narrative -->
+                    <div class="bg-black p-5 rounded border border-zinc-800">
+                        <h3 class="text-sm font-bold text-brand-orange font-mono uppercase mb-2">
+                            1. The Arrest of David Riley (San Diego, California)
+                        </h3>
+                        <p class="mb-3">
+                            On August 22, 2009, college student David Leon Riley was pulled over by San Diego police officers for driving with expired vehicle registration tags. During the traffic stop, officers learned Riley's driver's license was suspended.
+                        </p>
+                        <p class="mb-3">
+                            In accordance with police policy, officers impounded the vehicle. During an inventory search of the car, officers discovered two hidden loaded handguns. Riley was placed under arrest for carrying concealed firearms.
+                        </p>
+                        <p>
+                            During the search incident to arrest, officers confiscated Riley's smartphone from his pocket. At the station, a gang detective browsed through the phone's digital files without asking a judge for a search warrant. The detective found gang photographs, videos, and contacts. Prosecutors used this digital evidence to connect Riley to an earlier shooting, resulting in a conviction for attempted murder and a 15-year prison sentence.
+                        </p>
+                    </div>
+
+                    <!-- Brima Wurie Narrative -->
+                    <div class="bg-black p-5 rounded border border-zinc-800">
+                        <h3 class="text-sm font-bold text-brand-orange font-mono uppercase mb-2">
+                            2. Consolidated Case: United States v. Wurie (Boston, Massachusetts)
+                        </h3>
+                        <p class="mb-3">
+                            The Supreme Court consolidated Riley's case with <em>United States v. Wurie</em>. In 2007, Brima Wurie was arrested in Boston after officers observed him make an illegal drug sale.
+                        </p>
+                        <p>
+                            At the police station, officers seized Wurie's flip phone and noticed incoming calls labeled "My House." Officers opened the phone, accessed the call log to identify his home address, and used that address to obtain a search warrant for his apartment, discovering drugs and weapons.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5-Stage Interactive Timeline -->
+                <div class="mt-8 border-t border-brand-border pt-6 font-mono">
+                    <h3 class="text-base font-bold text-white mb-3 uppercase">Procedural Timeline</h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 mb-4 text-xs">
+                        <button onclick="selectTimeline(0)" id="tl-0" class="tl-btn p-2 rounded bg-brand-orange text-black font-bold text-left">
+                            1. Arrest (2009)
+                        </button>
+                        <button onclick="selectTimeline(1)" id="tl-1" class="tl-btn p-2 rounded bg-black text-zinc-400 text-left border border-zinc-800">
+                            2. Suppression Motion
+                        </button>
+                        <button onclick="selectTimeline(2)" id="tl-2" class="tl-btn p-2 rounded bg-black text-zinc-400 text-left border border-zinc-800">
+                            3. Circuit Split
+                        </button>
+                        <button onclick="selectTimeline(3)" id="tl-3" class="tl-btn p-2 rounded bg-black text-zinc-400 text-left border border-zinc-800">
+                            4. Certiorari
+                        </button>
+                        <button onclick="selectTimeline(4)" id="tl-4" class="tl-btn p-2 rounded bg-black text-zinc-400 text-left border border-zinc-800">
+                            5. 9-0 SCOTUS Ruling
+                        </button>
+                    </div>
+
+                    <div id="timelineDetail" class="p-4 bg-black rounded border border-zinc-800 text-xs text-zinc-300 font-serif leading-relaxed">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ==================== PAGE 3: COURT DECISION ==================== -->
+        <section id="page-decision" class="page-section hidden space-y-8">
+
+            <div class="bg-brand-card p-6 sm:p-8 rounded-xl border border-brand-border print-card">
+                <div class="flex items-center justify-between border-b border-brand-border pb-4 mb-6">
+                    <div>
+                        <span class="text-xs font-mono text-brand-orange uppercase">Judicial Opinion</span>
+                        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1 uppercase">Supreme Court Decision</h2>
+                    </div>
+                    <button onclick="copyText('decisionText')" class="text-xs font-mono px-3 py-1.5 bg-zinc-900 text-zinc-300 hover:text-brand-orange rounded border border-zinc-700">
+                        Copy Section
+                    </button>
+                </div>
+
+                <div id="decisionText" class="space-y-6">
+                    <!-- Majority Opinion Analysis -->
+                    <div class="p-5 bg-black rounded border border-zinc-800 space-y-3">
+                        <h3 class="text-sm font-bold text-brand-orange font-mono uppercase">
+                            Majority Opinion: Chief Justice John Roberts
+                        </h3>
+                        <p class="text-xs sm:text-sm text-zinc-300 font-serif leading-relaxed">
+                            Chief Justice John Roberts delivered the unanimous 9-0 opinion. The Court addressed whether the traditional <strong>Search-Incident-to-Arrest (SITA)</strong> exception applies to modern digital electronics.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 font-mono text-xs">
+                            <div class="p-3 bg-zinc-950 rounded border border-zinc-800">
+                                <strong class="text-brand-orange block mb-1 uppercase">1. Officer Safety Concern</strong>
+                                Digital data on a phone screen cannot be used as a physical weapon to harm arresting officers.
+                            </div>
+                            <div class="p-3 bg-zinc-950 rounded border border-zinc-800">
+                                <strong class="text-brand-orange block mb-1 uppercase">2. Evidence Destruction</strong>
+                                The risk of remote wiping can be eliminated by placing seized phones into signal-blocking Faraday enclosures or turning them off.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comparison Matrix -->
+                    <div class="bg-black p-5 rounded border border-zinc-800">
+                        <h3 class="text-sm font-bold text-white font-mono uppercase mb-3">
+                            Legal Framework Comparison: Physical Containers vs Digital Devices
+                        </h3>
+                        <div class="overflow-x-auto font-mono text-xs">
+                            <table class="w-full text-left text-zinc-300 border-collapse">
+                                <thead>
+                                    <tr class="border-b border-zinc-800 text-brand-orange uppercase">
+                                        <th class="p-2">Criteria</th>
+                                        <th class="p-2">Physical Search (Chimel v. California)</th>
+                                        <th class="p-2">Digital Search (Riley v. California)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-zinc-800">
+                                    <tr>
+                                        <td class="p-2 font-bold text-white">Target Item</td>
+                                        <td class="p-2">Wallets, pockets, physical mail</td>
+                                        <td class="p-2 text-brand-orange font-bold">Smartphones, tablets, digital memory</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 font-bold text-white">Storage Capacity</td>
+                                        <td class="p-2">Limited physical space</td>
+                                        <td class="p-2">Gigabytes (Millions of documents)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 font-bold text-white">Warrant Requirement</td>
+                                        <td class="p-2">No warrant needed for grab area</td>
+                                        <td class="p-2 text-brand-orange font-bold">Warrant required prior to search</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Concurrence -->
+                    <div class="p-5 bg-black rounded border border-zinc-800">
+                        <h3 class="text-sm font-bold text-white font-mono uppercase mb-1">
+                            Justice Samuel Alito's Concurrence
+                        </h3>
+                        <p class="text-xs sm:text-sm text-zinc-300 font-serif leading-relaxed">
+                            Justice Alito concurred in the judgment, agreeing that searching smartphones creates unprecedented privacy risks. However, he noted that lawmakers and state legislatures could pass clear statutes regulating law enforcement access to digital information.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ==================== PAGE 4: LEGAL IMPACT ==================== -->
+        <section id="page-impact" class="page-section hidden space-y-8">
+
+            <div class="bg-brand-card p-6 sm:p-8 rounded-xl border border-brand-border print-card">
+                <div class="flex items-center justify-between border-b border-brand-border pb-4 mb-6">
+                    <div>
+                        <span class="text-xs font-mono text-brand-orange uppercase">Precedents & Legacy</span>
+                        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1 uppercase">Legal Impact & Modern Precedents</h2>
+                    </div>
+                    <button onclick="copyText('impactText')" class="text-xs font-mono px-3 py-1.5 bg-zinc-900 text-zinc-300 hover:text-brand-orange rounded border border-zinc-700">
+                        Copy Section
+                    </button>
+                </div>
+
+                <div id="impactText" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs">
+                        <!-- Carpenter v. US -->
+                        <div class="p-5 bg-black rounded border border-zinc-800">
+                            <div class="text-brand-orange font-bold text-sm mb-1">Carpenter v. United States (2018)</div>
+                            <p class="text-zinc-300 font-serif leading-relaxed">
+                                Expanding the doctrine from <em>Riley</em>, the Supreme Court ruled 5-4 that police must obtain a search warrant to collect historical Cell Site Location Information (CSLI) from mobile phone service providers.
+                            </p>
+                        </div>
+
+                        <!-- Faraday Bags -->
+                        <div class="p-5 bg-black rounded border border-zinc-800">
+                            <div class="text-white font-bold text-sm mb-1">Police Tactical Protocols</div>
+                            <p class="text-zinc-300 font-serif leading-relaxed">
+                                Law enforcement agencies nationwide now equip officers with signal-isolating Faraday bags to store seized smartphones until a judge reviews and signs a digital search warrant.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Fifth Amendment Biometrics -->
+                    <div class="p-6 bg-black rounded border-2 border-brand-orange">
+                        <h3 class="text-base font-bold text-white font-mono uppercase mb-2">
+                            The Next Frontier: Passcodes vs. Biometrics
+                        </h3>
+                        <p class="text-xs sm:text-sm text-zinc-300 font-serif leading-relaxed mb-4">
+                            While <em>Riley</em> requires a warrant to search data, modern courts are debating whether police can force suspects to unlock their phones under the Fifth Amendment:
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs">
+                            <div class="p-3 bg-zinc-950 rounded border border-zinc-800">
+                                <strong class="text-white block mb-1 uppercase">Passcodes & PINs</strong>
+                                Protected under the Fifth Amendment because disclosing a numeric password requires revealing mental knowledge.
+                            </div>
+                            <div class="p-3 bg-zinc-950 rounded border border-zinc-800">
+                                <strong class="text-white block mb-1 uppercase">Biometrics (Face ID / Fingerprints)</strong>
+                                Lower courts remain split on whether compelling physical biometric unlocks constitutes testimonial evidence.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-brand-border py-6 text-center text-xs font-mono text-zinc-500 no-print mt-auto">
+        <div class="max-w-5xl mx-auto px-4 space-y-1">
+            <p class="text-zinc-400">Riley v. California (2014) — Student Landmark Case Study</p>
+            <p>Fourth Amendment Digital Privacy Research Portal</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // TAB SWITCHER
+        function switchTab(tabId) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.add('hidden'));
+            document.getElementById(`page-${tabId}`).classList.remove('hidden');
+
+            document.querySelectorAll('.nav-tab').forEach(btn => {
+                btn.className = "nav-tab px-4 py-2 rounded transition whitespace-nowrap text-zinc-400 hover:bg-zinc-900 hover:text-white";
+            });
+
+            const activeBtn = document.getElementById(`tab-${tabId}`);
+            if (activeBtn) {
+                activeBtn.className = "nav-tab px-4 py-2 rounded transition whitespace-nowrap bg-brand-orange text-black font-black";
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // TIMELINE DATA
+        const timelineSteps = [
+            {
+                title: "1. Traffic Stop & Arrest (August 2009)",
+                text: "David Riley was pulled over in San Diego for expired registration tags. Officers impounded his vehicle, found handguns, arrested him, and seized his smartphone."
+            },
+            {
+                title: "2. Trial Court Suppression Hearing (2010)",
+                text: "Riley's lawyer argued searching his cell phone without a warrant violated the 4th Amendment. The trial judge denied the motion, admitting gang photos into evidence."
+            },
+            {
+                title: "3. Circuit Split (2013)",
+                text: "California Appeals Court affirmed Riley's conviction. Meanwhile, the First Circuit Court of Appeals ruled opposite in United States v. Wurie (Boston), creating a circuit split."
+            },
+            {
+                title: "4. Supreme Court Certiorari (2014)",
+                text: "The U.S. Supreme Court granted certiorari in both cases and consolidated them to establish a uniform national Fourth Amendment rule for digital smartphones."
+            },
+            {
+                title: "5. Unanimous 9-0 Verdict (June 25, 2014)",
+                text: "Chief Justice John Roberts delivered the 9-0 opinion reversing Riley's conviction, declaring police must 'get a warrant' before searching digital cell phone data."
+            }
+        ];
+
+        function selectTimeline(idx) {
+            document.querySelectorAll('.tl-btn').forEach((btn, i) => {
+                if (i === idx) {
+                    btn.className = "tl-btn p-2 rounded bg-brand-orange text-black font-bold text-left";
+                } else {
+                    btn.className = "tl-btn p-2 rounded bg-black text-zinc-400 text-left border border-zinc-800";
+                }
+            });
+
+            const step = timelineSteps[idx];
+            document.getElementById('timelineDetail').innerHTML = `
+                <strong class="text-brand-orange font-mono block text-sm mb-1 uppercase">${step.title}</strong>
+                <p class="text-zinc-300 font-serif">${step.text}</p>
+            `;
+        }
+
+        // COPY SECTION TEXT
+        function copyText(elementId) {
+            const textToCopy = document.getElementById(elementId).innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = textToCopy;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            showToast("Section Text Copied!");
+        }
+
+        // COPY ENTIRE BRIEF
+        function copyAllText() {
+            let fullText = "RILEY V. CALIFORNIA (2014) - CASE BRIEF\n\n";
+            fullText += document.getElementById('summaryText').innerText + "\n\n";
+            fullText += "CONSTITUTIONAL QUESTION:\n" + document.getElementById('questionText').innerText + "\n\n";
+            fullText += "CASE BACKGROUND:\n" + document.getElementById('backgroundNarrative').innerText + "\n\n";
+            fullText += "JUDICIAL DECISION:\n" + document.getElementById('decisionText').innerText + "\n\n";
+            fullText += "LEGAL IMPACT:\n" + document.getElementById('impactText').innerText;
+
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = fullText;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            showToast("Full Brief Copied for WordPress/Docs!");
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = "fixed bottom-5 right-5 bg-brand-orange text-black font-mono font-bold text-xs px-4 py-2 rounded shadow-2xl z-50";
+            toast.innerText = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2500);
+        }
+
+        // INITIALIZE
+        window.onload = function() {
+            selectTimeline(0);
+        };
+    </script>
+</body>
+</html>
